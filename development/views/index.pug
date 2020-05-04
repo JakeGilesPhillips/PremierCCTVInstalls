@@ -1,0 +1,162 @@
+//- index.pug
+extends layout
+
+append styles
+  link(rel='stylesheet', href='static/styles/views/index.css')
+
+block content
+    #header.flex.center-vh
+        .section.flex.row.center-v.between
+            #logo.flex.column.center-v.start-h
+                img(src="static/images/logos/logo-three.png")
+            #links.flex.row.center-v.end-h.mobile-column.list
+                .header-link.flex.center-vh(data-link="home")
+                    span HOME
+                .header-link.flex.center-vh(data-link="about")
+                    span ABOUT US
+                .header-link.flex.center-vh(data-link="services")
+                    span SERVICES
+                .header-link.flex.center-vh(data-link="contact")
+                    span CONTACT 
+                .header-link.covid.flex.center-vh(data-link="covid")
+                    span COVID-19
+            #burger.flex.column.center-h.between
+                .line
+                .line
+                .line
+                
+    #content-wrapper.flex.column.center-h.start-v.darkblue
+        .section.top.flex.column.start-v.center-h(data-section="home")
+            .subsection.flex.column.start-v.start-h
+                span.title.left HOW SECURE <br>IS <span class="highlighted lightblue">YOUR</span> <br>HOME?
+                span.subtitle.left.highlighted.lightblue CCTV PACKAGES STARTING FROM £299
+                span.subtitle.left.highlighted.black HARDWARE AND INSTALLATION INCLUDED
+            img#camera(src="static/images/vector_cctv_camera.png")
+        
+        .section.flex.column.start-v.center-h.superlight(data-section="about")
+            .subsection.flex.column.center-vh
+                span.paragraph.lightblue The Midlands' Premier CCTV Installation Company
+                span.paragraph.darkblue Aiming to secure your home, business or property at an affordable price and high professional standard. Friendly, family run business based in Birmingham.
+                span.paragraph.darkblue <span class="lightblue">CALL TODAY</span> and see how we can secure your property.
+
+        .section.parallax.flex.row.center-vh.white(data-section="package")
+            .subsection.half.flex.column.start-v.start-h
+                .list-item.flex.row.start-h.center-v
+                    span.material-icons.lightblue done_outline
+                    span.black.left User-friendly, easy to use system
+                .list-item.flex.row.start-h.center-v
+                    span.material-icons.lightblue done_outline
+                    span.black.left Build a bespoke package for your needs
+                .list-item.flex.row.start-h.center-v
+                    span.material-icons.lightblue done_outline
+                    span.black.left Various storage options
+                .list-item.flex.row.start-h.center-v
+                    span.material-icons.lightblue done_outline
+                    span.black.left View your property on your mobile phone
+                .list-item.flex.row.start-h.center-v
+                    span.material-icons.lightblue done_outline
+                    span.black.left 2 years warranty for peace of mind      
+            .subsection.half.flex.column.end-v.center-h
+                img#phone(src="static/images/phone_car.png")
+        
+        .section.flex.column.start-v.center-h.lightblue(data-section="services")
+            .subsection.flex.column.start-v.start-h
+                span.tagline Homes with no security measures in place are <span class="highlighted darkblue">five times</span> more likely to be burgled than those with simple security measures. Don't be another statistic, get secured now!
+      
+        .section.parallax.flex.row.center-vh.white(data-section="app")
+            .subsection.half.flex.column.start-v.start-h
+                span.heading.darkblue Key Benefits:
+                .list-item.flex.row.start-h.center-v
+                    span.material-icons.lightblue check_circle
+                    span.darkblue.left Anti-vandal HD cameras
+                .list-item.flex.row.start-h.center-v
+                    span.material-icons.lightblue check_circle
+                    span.darkblue.left Motion alerts to your mobile phone
+                .list-item.flex.row.start-h.center-v
+                    span.material-icons.lightblue check_circle
+                    span.darkblue.left 100ft Night Vision
+                .list-item.flex.row.start-h.center-v
+                    span.material-icons.lightblue check_circle
+                    span.darkblue.left IP Rated all-weather cameras
+                .list-item.flex.row.start-h.center-v
+                    span.material-icons.lightblue check_circle
+                    span.darkblue.left Up to 6 months auto-recorded footage saved
+                .list-item.flex.row.start-h.center-v
+                    span.material-icons.lightblue check_circle
+                    span.darkblue.left Connect as many mobile devices as you like
+            .subsection.half.flex.column.center-vh
+                img#installs(src="static/images/installs.png")
+
+        .section.flex.start-v.center-h.superlight
+            .subsection.one-third.flex.column.start-h.center-v
+                img#hand(src="static/images/hand_phone.png")
+            .subsection.two-third.flex.column.start-v.start-h
+                span.paragraph.lightblue.left View your property on your mobile phone...
+                span.heading.lightblue.bold.left FOR FREE!
+                .list-item.flex.row.start-h.center-v
+                    span.left.darkblue We are able to set-up your mobile phone for remote viewing on a free to use app.
+                .list-item.margin-20.flex.row.start-h.center-v
+                    span.left.darkblue Available on both IOS and Android. The app will also work on your tablet or computer, allowing you to view your property from multiple devices.
+                .list-item.margin-20.flex.row.start-h.center-v
+                    span.material-icons.lightblue check_circle
+                    span.left.darkblue Plugs into your current TV via HDMI
+                .list-item.margin-20.flex.row.start-h.center-v
+                    span.material-icons.lightblue check_circle
+                    span.left.darkblue Remote viewing app which enables you to monitor your cameras from anywhere in around the world.
+                .list-item.flex.row.start-h.center-v
+                    span.material-icons.lightblue check_circle
+                    span.left.darkblue 2 years warranty for peace of mind.
+
+        .section.flex.center-vh.superlight(data-section="covid")
+            .warning.flex.column.start-v.center-h
+                span.heading.red.bold COVID-19 UPDATE
+                span.paragraph.red We are able to carry out installs while adhering to Official Government Social Distancing Guidance. The majority of work will take place outside the property.
+                span.paragraph.red Our installation technicians are equipped with appropriate personal protective equipment and will disinfect any surfaces that they come into contact with.
+                span.paragraph.red We will always remain a minimum of 2 metres away from any persons during installation.
+
+        .section.flex.wrap.row.start-v.center-h.mobile-column.lightblue(data-section="contact")
+            span.subtitle.bold.full.left Contact Us
+            #form.subsection.half.flex.column.start-v.start-h
+                input#name(placeholder="Name" type="text" data-type="text" data-required="true")
+                span.required
+                span.invalid.name
+                input#number(placeholder="Number" type="text" data-type="number" data-required="group")
+                span.required
+                span.invalid.number
+                span.requirement
+                input#email(placeholder="Email" type="text" data-type="email" data-required="group")
+                span.required
+                span.invalid.email
+                span.requirement
+                textarea#message(placeholder="Message" type="text" rows="10" data-type="text" data-required="false")
+                #submit.flex.center-vh
+                    span.header SEND MESSAGE
+            .subsection.half.flex.column.start-v.end-h
+                span.subtitle.right LET US <span class="highlighted darkblue">SECURE</span><br>WHAT IS IMPORTANT<br>TO YOU.
+
+            .subsection.half.flex.column.center-v.start-h
+                span.paragraph.left Fitted by a professional installer with 12 years worth of experience. 
+                span.paragraph.left Contact us for more information.
+            .subsection.half.flex.column.center-v.end-h
+                .list-item.flex.row.start-h.center-v
+                    span.material-icons.darkblue call
+                    span.left.darkblue 0121 798 0209
+                .list-item.flex.row.start-h.center-v
+                    span.material-icons.darkblue email
+                    span.left.darkblue(onclick='window.open("mailto:contact@premiercctvinstalls.co.uk")' style="cursor: pointer") contact@premiercctvinstalls.co.uk
+
+        .section.flex.between.center-v.darkblue
+            span.footer © Premier CCTV Installs 
+                = new Date().getFullYear()
+            span.footer Website by 
+                span.bold.underline(onclick='window.open("https://newblankpage.co.uk")') newblankpage
+    #fade 
+
+    #covid-banner.flex.column.center-vh(data-link='covid')
+        span.close.material-icons highlight_off
+        span.heading We're still able to carry out installs in line with Government Social Distancing Guidance.
+        span.paragraph Click this banner for more information.
+
+
+append scripts
+        script(src="static/scripts/contact-form.js")

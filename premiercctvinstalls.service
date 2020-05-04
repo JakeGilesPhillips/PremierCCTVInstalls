@@ -1,0 +1,14 @@
+[Unit]
+Description=Premier CCTV Email Server
+
+[Service]
+ExecStart=/usr/bin/node /var/www/premiercctvinstalls/server.js
+Restart=always
+User=premier
+Group=premier
+Environment=PATH=/usr/bin:/usr/local/bin
+Environment=NODE_ENV=production
+WorkingDirectory=/var/www/premiercctvinstalls
+
+[Install]
+WantedBy=multi-user.target

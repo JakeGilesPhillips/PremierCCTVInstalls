@@ -1,0 +1,136 @@
+$background-color: #2E2E2E
+$darkblue: #142957
+$lightblue: #539ce0
+$superlight: #e2f2fa
+$red: #c71733
+
+html, body 
+    height: 100%
+    width: 100%
+    padding: 0
+    margin: 0
+    background: $background-color
+    z-index: 0
+
+span 
+    // font-family: 'Roboto Condensed'
+    font-family: 'Ubuntu'
+    color: white
+    text-align: center
+
+    &.title 
+        font-size: 70pt
+    &.subtitle
+        font-size: 20pt
+    &.tagline
+        font-size: 14pt
+    &.heading
+        font-size: 14pt
+        margin-bottom: 10px
+    &.paragraph
+        font-size: 12pt
+        margin: 10px 0
+    &.footer
+        font-size: 8pt
+    &.lightblue
+        color: $lightblue
+    &.darkblue
+        color: $darkblue
+    &.highlighted
+        padding: 0 5px
+    &.highlighted.lightblue
+        color: white
+        background: $lightblue
+    &.highlighted.darkblue
+        color: white
+        background: $darkblue
+    &.highlighted.black
+        color: white
+        background: black
+    &.white
+        color: white
+    &.black
+        color: black
+    &.red
+        color: $red
+    &.left
+        text-align: left
+    &.right
+        text-align: right
+    &.link
+        cursor: pointer
+        text-decoration: underline
+    &.underline
+        text-decoration: underline
+    &.bold
+        font-weight: bold    
+    &.full
+        width: 100%
+
+div
+    &.darkblue
+        background: $darkblue
+    &.lightblue
+        background: $lightblue
+    &.superlight
+        background: $superlight
+    &.white
+        background: white
+    &.black
+        background: black
+
+.section      
+    position: relative  
+    width: calc(100% - 1000px)
+    padding-left: 500px
+    padding-right: 500px
+
+// RESPONSIVE
+@media screen and (max-width: 1800px)
+    .section        
+        width: calc(100% - 400px)
+        padding-left: 200px
+        padding-right: 200px    
+
+@media screen and (max-width: 1300px)
+    .section        
+        width: calc(100% - 200px)
+        padding-left: 100px
+        padding-right: 100px    
+
+@media screen and (max-width: 995px)
+    .section        
+        width: calc(100% - 100px)
+        padding-left: 50px
+        padding-right: 50px    
+
+    span
+        &.title
+            font-size: 60pt
+        &.subtitle
+            font-size: 16pt
+
+@media screen and (max-width: 768px)
+    .section        
+        width: calc(100% - 30px)
+        padding-left: 15px
+        padding-right: 15px  
+
+    span
+        &.title
+            font-size: 40pt
+        &.subtitle
+            font-size: 14pt
+        &.tagline
+            font-size: 12pt
+        &.heading
+            font-size: 12pt
+        &.paragraph
+            font-size: 10pt
+
+@media screen and (max-width: 500px)
+    span
+        &.title
+            font-size: 30pt
+        &.subtitle
+            font-size: 12pt

@@ -1,0 +1,217 @@
+@import './header.sass'
+
+#content-wrapper 
+    position: absolute
+    width: 100%
+
+    .section
+        padding-top: 20px 
+        padding-bottom: 20px 
+        background-size: cover
+
+        &.top
+            padding-top: 100px
+
+        .subsection
+            width: 100%
+            padding: 10px 0
+
+            &.one-third
+                width: 33.33%
+
+            &.half
+                width: 50% 
+
+            &.two-third
+                width: 66.66%
+
+    .section[data-section="home"]
+        background-image: url('../../images/bricks_camera.png')
+        background-position-x: 
+
+    .section[data-section="package"]
+        background-image: url('../../images/houses.png')
+
+    .section[data-section="app"]
+        background-image: url('../../images/stream_car.png')
+
+    .section.parallax
+        background-position-x: center
+        background-position-y: 0px
+
+.heading, .paragraph
+    margin-bottom: 5px
+
+.list-item
+    margin-bottom: 10px
+
+    &.margin-20
+        margin-bottom: 20px
+
+    span
+        font-size: 11pt
+
+    .material-icons
+        margin-right: 10px
+
+.warning
+    background: white
+    border: 5px solid $red
+    border-radius: 5px
+    padding: 10px
+
+#camera
+    position: absolute
+    bottom: -30px
+    right: 0
+    width: 20vw
+    max-width: 250px
+    z-index: 99
+
+#phone 
+    width: 70%
+    max-width: 280px
+    transform: scale(1.1) translateY(18px)
+
+#installs
+    width: 65%
+    max-width: 210px
+    transform: scale(1.4)
+    z-index: 99
+
+#hand
+    width: 65%
+    max-width: 210px
+    transform: scale(1.4)
+    z-index: 99
+
+#fade 
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: black
+    opacity: 0.0
+    transition: .4s
+    pointer-events: none
+    z-index: 99
+
+#form
+    input, textarea
+        width: calc(100% - 10px)
+        border: none
+        margin: 0 0 10px 0
+        border-radius: 5px
+
+    input
+        padding: 10px 5px
+
+        &.error
+            border-bottom: 2px inset $red
+        &.ok 
+            border-bottom: 2px inset green
+
+    textarea 
+        resize: none
+        padding: 5px    
+
+    #submit
+        position: relative
+        border: 2px solid white
+        border-radius: 5px
+        width: calc(100% - 4px)
+        padding: 5px 0
+        cursor: pointer
+
+        span 
+            color: white
+            transition: .4s
+            z-index: 99
+
+        &:before
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            height: 100%
+            width: 0%
+            transition: .4s
+            background: white
+            z-index: 0
+
+        &:hover
+            span
+                color: $lightblue
+
+            &:before
+                width: 100% 
+    
+    .invalid::after, .requirement::after 
+        position: absolute
+        color: $red
+        z-index: 99
+        font-size: 6pt
+        bottom: 28px
+        right: 17px
+        text-align: right
+    .invalid.name::after 
+        content: 'Please enter a contact name' 
+    .invalid.number::after 
+        content: 'Please enter a valid number'  
+    .invalid.email::after 
+        content: 'Please enter a valid email'   
+    .requirement::after 
+        content: 'Please enter a method of contact'
+    .invalid, .requirement 
+        display: none
+    .required, .invalid, .requirement 
+        position: relative
+        width: 100%
+    .required::after 
+        content: '*'
+        position: absolute
+        color: $red
+        right: 5px
+        z-index: 99
+        top: -40px
+
+#covid-banner
+    position: fixed
+    z-index: 99
+    bottom: 0
+    left: 0
+    width: calc(100% - 60px)
+    padding: 0 30px
+    background: $red
+    cursor: pointer
+    height: 120px
+    bottom: -120px
+    transition: .4s
+    border-top: 1px solid white
+
+    &.show
+        bottom: 0
+
+    .close
+        position: absolute
+        top: 5px
+        right: 5px
+        cursor: pointer
+
+@media screen and (max-width: 768px)
+    #fade
+        &.show
+            opacity: 0.9
+
+    .list-item
+        span
+            font-size: 10pt
+
+    .mobile-column
+        .half, .one-third, .two-third
+            width: 100% !important
+
+@media screen and (max-width: 500px)
+    #phone
+        transform: unset
