@@ -1,14 +1,14 @@
-$(document).ready(() =>
+$(document).ready(function () 
 {
     $(window).on('scroll', scrollSections);
     $("#burger").on('click', toggleMenu);
-    $("#covid-banner .close").on('click', (ev) =>
+    $("#covid-banner .close").on('click', function (ev)
     {
         ev.stopPropagation();
         $("#covid-banner").removeClass("show");
     });
     $("div[data-link]").on('click', scrollToSection);
-    setTimeout(() => $("#covid-banner").addClass("show"), 1000);
+    setTimeout(function () { $("#covid-banner").addClass("show"), 1000 });
 });
 
 function scrollSections()

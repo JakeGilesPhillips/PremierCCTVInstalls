@@ -30,7 +30,7 @@ app.post('/send', (req, res) => {
         if (error) {
             return console.log(error);
         }
-        console.log(`Message to ${to}: ${info.messageId}`);
+        console.log(`Message to ${to} from ${data.name} ${info.messageId}`);
         res.sendStatus(200);
     });
 })

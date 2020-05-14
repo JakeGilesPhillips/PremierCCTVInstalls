@@ -8,7 +8,7 @@ block content
     #header.flex.center-vh
         .section.flex.row.center-v.between
             #logo.flex.column.center-v.start-h
-                img(src="static/images/logos/logo-three.png")
+                img(alt="premier cctv installs logo" src="static/images/logos/logo-three.png")
             #links.flex.row.center-v.end-h.mobile-column.list
                 .header-link.flex.center-vh(data-link="home")
                     span HOME
@@ -31,7 +31,7 @@ block content
                 span.title.left HOW SECURE <br>IS <span class="highlighted lightblue">YOUR</span> <br>HOME?
                 span.subtitle.left.highlighted.lightblue CCTV PACKAGES STARTING FROM £299
                 span.subtitle.left.highlighted.black HARDWARE AND INSTALLATION INCLUDED
-            img#camera(src="static/images/vector_cctv_camera.png")
+            img#camera(alt="cctv camera vector image" src="static/images/vector_cctv_camera.png")
         
         .section.flex.column.start-v.center-h.superlight(data-section="about")
             .subsection.flex.column.center-vh
@@ -57,7 +57,7 @@ block content
                     span.material-icons.lightblue done_outline
                     span.black.left 2 years warranty for peace of mind      
             .subsection.half.flex.column.end-v.center-h
-                img#phone(src="static/images/phone_car.png")
+                img#phone(alt="image of cctv app displaying view of car outside" src="static/images/phone_car.png")
         
         .section.flex.column.start-v.center-h.lightblue(data-section="services")
             .subsection.flex.column.start-v.start-h
@@ -131,6 +131,8 @@ block content
                 textarea#message(placeholder="Message" type="text" rows="10" data-type="text" data-required="false")
                 #submit.flex.center-vh
                     span.header SEND MESSAGE
+                #sending.flex.row.center-vh(style="display: none")
+                    span.response Sending Message...  
             .subsection.half.flex.column.start-v.end-h
                 span.subtitle.right LET US <span class="highlighted darkblue">SECURE</span><br>WHAT IS IMPORTANT<br>TO YOU.
 
@@ -159,4 +161,4 @@ block content
 
 
 append scripts
-        script(src="static/scripts/contact-form.js")
+        script(src="static/scripts/contact-form.js?v=1.1")

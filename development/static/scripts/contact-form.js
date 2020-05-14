@@ -26,7 +26,7 @@ function sendMail(el)
             contentType: "application/json",
             //url: "http://localhost:7000/send",
             url: "https://premiercctvinstalls.co.uk/send",
-            success: (res) =>
+            success: function (res)
             {
                 $(form).removeClass('disabled');
                 $(form).find("#sending .response").html("Sent! We'll be back in touch soon.");
@@ -34,7 +34,7 @@ function sendMail(el)
                 $(form).find("#sending").delay(4000).fadeOut(400);
                 clearForm();
             },
-            error(err)
+            error: function (err)
             {
                 $(form).removeClass('disabled');
                 $(form).find("#sending .response").html("Something went wrong, please try again.");
@@ -67,7 +67,7 @@ function validateForm(form)
 
 function getErrors()
 {
-    return $("#form").children('input').toArray().filter(a => $(a).hasClass('error')).length;
+    return $("#form").children('input').toArray().filter((a) => $(a).hasClass('error')).length;
 }
 function getInput(el)
 {
@@ -111,13 +111,13 @@ function validateEmail(input)
 function validateRequired()
 {
     var requiredElements = $("#form").children('input[data-required="true"]').toArray();
-    requiredElements.forEach((input) => { validateText(input); });
+    requiredElements.forEach(function (input) { validateText(input); });
 }
 
 function validateGroups()
 {
     var groupElements = $("#form").children('input[data-required="group"]').toArray();
-    var emptyGroupEls = groupElements.filter(a => $(a).val() == "");
+    var emptyGroupEls = groupElements.filter((a) => $(a).val() == "");
     if (emptyGroupEls.length == groupElements.length)
     {
         $(groupElements).removeClass("ok");
@@ -127,7 +127,7 @@ function validateGroups()
     else
     {
         $("#form .requirement").hide();
-        $(groupElements).each((i, el) => { validateInput($(el)) });
+        $(groupElements).each(function(i, el) { validateInput($(el)) });
     }
 }
 
